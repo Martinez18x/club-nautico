@@ -1,1 +1,48 @@
-<p>form-salida works!</p>
+<div>
+    <h4>Nueva salida</h4>
+
+
+    <div class="form-group row">
+        <label for="codigo" class="col-sm-1 col-form-label">Barco</label>
+        <div class="col-sm-11">
+            <select [(ngModel)]="id_barco" class="form-control">
+                @for(bas of bases; track bas){
+                <option value="{{bas.bases}}">{{bas.nombre}}</option>
+                }
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="codigo" class="col-sm-1 col-form-label">Capitan</label>
+        <div class="col-sm-11">
+            <select [(ngModel)]="id_capitan" class="form-control">
+                @for(bas of bases; track bas){
+                <option value="{{bas.bases}}">{{bas.id_capitan}}</option>
+                }
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="codigo" class="col-sm-1 col-form-label">Fecha</label>
+        <div class="col-sm-11">
+            <input type="text" class="form-control-plaintext" [(ngModel)]="fecha_salida" placeholder="Fecha Salida">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="codigo" class="col-sm-1 col-form-label">Hora</label>
+        <div class="col-sm-11">
+            <input type="text" class="form-control-plaintext" [(ngModel)]="hora_salida" placeholder="Hora Salida">
+        </div>
+    </div>
+
+     <div class="form-group row">
+        <label for="codigo" class="col-sm-1 col-form-label">Destino</label>
+        <div class="col-sm-11">
+            <input type="text" class="form-control-plaintext" [(ngModel)]="destino" placeholder="Destino">
+        </div>
+    </div>
+    <button class="btn btn-success" (click)="guardar()">Archivar</button>
+</div>
