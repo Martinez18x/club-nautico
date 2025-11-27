@@ -1,0 +1,25 @@
+<div>
+<h4>Lista de Barcos</h4>
+<table class="table table-hovered table-stripped">
+<thead>
+<th>Id</th>
+<th>Matricula</th>
+<th>Nombre</th>
+<th>Amarre</th>
+<th>Cuota</th>
+<th>Numero_Socio</th>
+</thead>
+<tbody>
+@for(datos of data;track datos){
+<tr>
+<td>{{datos.id}}</td>
+<td>{{datos.matriula}}</td>
+<td>{{datos.nombre}}</td>
+<td>{{datos.numero_amarre}}</td>
+<td>{{datos.cuota}}</td>
+<td>{{datos.id_socio}}</td>
+</tr>
+}
+</tbody>
+</table>
+</div>

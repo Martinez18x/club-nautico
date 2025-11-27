@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg navbar-dark" 
+     style="background-color:#0a2738; padding:10px 20px;"> 
+
+  <a class="navbar-brand" href="#" 
+     style="font-size:1.5rem; font-weight:bold; color:white;">
+     Náutico Puerto Real
+  </a> 
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" 
+    data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span> 
+  </button> 
+
+  <div class="collapse navbar-collapse" id="navbarNavDropdown"> 
+    <div class="navbar-nav" style="gap:5px;">
+
+      @if(activo == 1){ 
+        <a class="nav-item nav-link active" href="persona"
+           style="color:white; background:#0f435f; border-radius:8px; padding:10px 15px;">
+           Socios
+        </a> 
+      }@else{ 
+        <a class="nav-item nav-link" href="persona"
+           style="color:#d7e8f0; padding:10px 15px;">
+           Socios
+        </a> 
+      }  
+
+      @if(activo == 2){ 
+        <a class="nav-item nav-link active" href="barcos"
+           style="color:white; background:#0f435f; border-radius:8px; padding:10px 15px;">
+           Barcos
+        </a> 
+      }@else{ 
+        <a class="nav-item nav-link" href="barcos"
+           style="color:#d7e8f0; padding:10px 15px;">
+           Barcos
+        </a> 
+      }  
+
+      @if(activo == 3){ 
+        <a class="nav-item nav-link active" href="salida"
+           style="color:white; background:#0f435f; border-radius:8px; padding:10px 15px;">
+          Salida
+        </a> 
+      }@else{ 
+        <a class="nav-item nav-link" href="salida"
+           style="color:#d7e8f0; padding:10px 15px;">
+           Salida
+        </a> 
+      }       
+
+    </div>     
+  </div> 
+</nav>

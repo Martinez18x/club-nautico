@@ -1,0 +1,25 @@
+<div>
+<h4>Lista de Salida</h4>
+<table class="table table-hovered table-stripped">
+<thead>
+<th>Id</th>
+<th>Barco</th>
+<th>Capitan</th>
+<th>Fecha</th>
+<th>Hora</th>
+<th>Destino</th>
+</thead>
+<tbody>
+@for(datos of data;track datos){
+<tr>
+<td>{{datos.id}}</td>
+<td>{{datos.id_barco}}</td>
+<td>{{datos.id_capitan}}</td>
+<td>{{datos.fecha_salida}}</td>
+<td>{{datos.hora_salida}}</td>
+<td>{{datos.destino}}</td>
+</tr>
+}
+</tbody>
+</table>
+</div>

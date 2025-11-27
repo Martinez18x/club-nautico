@@ -1,0 +1,29 @@
+<div>
+    <h4>Nueva Persona</h4>
+    <div class="form-group row">
+        <label for="codigo" class="col-sm-1 col-form-label">Nombre</label>
+        <div class="col-sm-11">
+            <input type="text" class="form-control-plaintext" [(ngModel)]="nombre" placeholder="Nombre">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="codigo" class="col-sm-1 col-form-label">Apellido</label>
+        <div class="col-sm-11">
+            <input type="text" class="form-control-plaintext" [(ngModel)]="apellido" placeholder="Apellido">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="codigo" class="col-sm-1 col-form-label">Telefono</label>
+        <div class="col-sm-11">
+            <input type="text" class="form-control-plaintext" [(ngModel)]="telefono" placeholder="telefono">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="codigo" class="col-sm-1 col-form-label">Email</label>
+        <div class="col-sm-11">
+            <input type="text" class="form-control-plaintext" [(ngModel)]="email" placeholder="email">
+        </div>
+    </div>
+
+    <button class="btn btn-success" (click)="guardar()">Archivar</button>
+</div>

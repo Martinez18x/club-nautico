@@ -1,0 +1,17 @@
+<app-menu [activo]="2"></app-menu>
+<div class="container">
+    <hr>
+    @if(lista){
+    <div class="d-flex justify-content-end">
+        <button class="btn btn-success" (click)="mostrar()">Resgistrarse</button>
+    </div>
+    <hr>
+    <app-list-barcos></app-list-barcos>
+    }@else{
+    <div class="d-flex justify-content-start">
+        <button class="btn btn-primary" (click)="mostrar()">Volver</button>
+    </div>
+    <hr>
+    <app-form-barcos (accionRealizada)="recargar()"></app-form-barcos>
+    }
+</div>
