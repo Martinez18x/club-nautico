@@ -38,11 +38,11 @@ export class FormBarcos implements OnInit {
 
   guardar() {
     let datos = {
-      'matriula': this.matriula,
+      'matricula': this.matriula,
       'nombre': this.nombre,
-      'numero_amarre': this.numero_amarre,
+      'numeroamarre': this.numero_amarre,
       'cuota': this.cuota,
-      'id_socio': this. id_socio,
+      'idsocio': this.id_socio,
     };
     this.ApiService.guardarBarcos(datos).subscribe({
       next: (result) => {
