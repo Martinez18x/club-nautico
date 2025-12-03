@@ -29,16 +29,22 @@ export class ApiServiceTs {
     return this.http.get(this.apiUrl + "barcos").pipe(res => res);
   }
 
-guardarBarcos(datos: any): Observable<any>{
-return this.http.post(this.apiUrl + "/nuevo_barco",datos).pipe(res=>res);
-};
+  guardarBarcos(datos: any): Observable<any> {
+    return this.http.post(this.apiUrl + "nuevo_barco", datos).pipe(res => res);
+  };
 
 
-getSalida(): Observable<any> {
+  getSalida(): Observable<any> {
     return this.http.get(this.apiUrl + "salidas").pipe(res => res);
   }
 
+  guardaSalida(datos: any): Observable<any> {
+    return this.http.post(this.apiUrl + "nueva_salida ", datos).pipe(res => res);
+  };
 
+getCapitan(): Observable<any> {
+    return this.http.get(this.apiUrl + "capitan").pipe(res => res);
+  }
 
 }
 

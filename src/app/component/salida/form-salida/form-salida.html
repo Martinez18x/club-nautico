@@ -5,9 +5,9 @@
     <div class="form-group row">
         <label for="codigo" class="col-sm-1 col-form-label">Barco</label>
         <div class="col-sm-11">
-            <select [(ngModel)]="id_barco" class="form-control">
+            <select [(ngModel)]="idbarco" class="form-control">
                 @for(bas of bases; track bas){
-                <option value="{{bas.bases}}">{{bas.nombre}}</option>
+                <option value="{{bas.id}}">{{bas.nombre}}</option>
                 }
             </select>
         </div>
@@ -16,9 +16,9 @@
     <div class="form-group row">
         <label for="codigo" class="col-sm-1 col-form-label">Capitan</label>
         <div class="col-sm-11">
-            <select [(ngModel)]="id_capitan" class="form-control">
-                @for(bas of bases; track bas){
-                <option value="{{bas.bases}}">{{bas.id_capitan}}</option>
+            <select [(ngModel)]="idcapitan" class="form-control">
+                @for(bas of capitan; track bas){
+                <option value="{{bas.id}}">{{bas.nombre}}</option>
                 }
             </select>
         </div>
@@ -27,14 +27,14 @@
     <div class="form-group row">
         <label for="codigo" class="col-sm-1 col-form-label">Fecha</label>
         <div class="col-sm-11">
-            <input type="text" class="form-control-plaintext" [(ngModel)]="fecha_salida" placeholder="Fecha Salida">
+            <input type="text" class="form-control-plaintext" [(ngModel)]="fechasalida" placeholder="Fecha Salida">
         </div>
     </div>
 
     <div class="form-group row">
         <label for="codigo" class="col-sm-1 col-form-label">Hora</label>
         <div class="col-sm-11">
-            <input type="text" class="form-control-plaintext" [(ngModel)]="hora_salida" placeholder="Hora Salida">
+            <input type="text" class="form-control-plaintext" [(ngModel)]="horasalida" placeholder="Hora Salida">
         </div>
     </div>
 

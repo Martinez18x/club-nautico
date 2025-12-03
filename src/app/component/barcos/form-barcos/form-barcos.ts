@@ -9,11 +9,11 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './form-barcos.css',
 })
 export class FormBarcos implements OnInit {
-  matriula: string = '';
+  matricula: string = '';
   nombre: string = '';
-  numero_amarre: number=0;
+  numeroamarre: number=0;
   cuota: number= 0;
-  id_socio:any;
+  idsocio:any;
   
 
   @Output() accionRealizada = new EventEmitter<any>();
@@ -38,11 +38,11 @@ export class FormBarcos implements OnInit {
 
   guardar() {
     let datos = {
-      'matricula': this.matriula,
+      'matricula': this.matricula,
       'nombre': this.nombre,
-      'numeroamarre': this.numero_amarre,
+      'numeroamarre': this.numeroamarre,
       'cuota': this.cuota,
-      'idsocio': this.id_socio,
+      'idsocio': this.idsocio,
     };
     this.ApiService.guardarBarcos(datos).subscribe({
       next: (result) => {

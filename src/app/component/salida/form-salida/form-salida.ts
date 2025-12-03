@@ -9,23 +9,39 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './form-salida.css',
 })
 export class FormSalida implements OnInit { 
-id_barco:string=''; 
-id_capitan:string=''; 
-fecha_salida: string='';
-hora_salida: string='';
+idbarco:string=''; 
+idcapitan:string=''; 
+fechasalida: string='';
+horasalida: string='';
 destino: string='';
 
 
 
 @Output() accionRealizada = new EventEmitter<any>();
-
+  
+capitan: any;
 bases:any; 
 horas:any; 
 constructor(private ApiService: ApiServiceTs){}; 
  
   ngOnInit(): void { 
     this.cargarBarcos(); 
+    this.cargarCapitan();
   } 
+
+  cargarCapitan(){ 
+    this.ApiService.getCapitan().subscribe({ 
+      next: (result) => { 
+        console.log(result); 
+        this.capitan=result; 
+      }, 
+      error: (err) => { 
+        console.log(err); 
+      } 
+    }); 
+  } 
+ 
+
  
   cargarBarcos(){ 
     this.ApiService.getBarcos().subscribe({ 
@@ -39,16 +55,19 @@ constructor(private ApiService: ApiServiceTs){};
     }); 
   } 
  
+
+  
+ 
   guardar(){ 
     let datos={ 
-      'id_barco':this.id_barco, 
-      'id_capitan':this.id_capitan,
-      'fecha_salida':this.fecha_salida,
-      'hora_salida':this.hora_salida,
+      'idbarco':this.idbarco, 
+      'idcapitan':this.idcapitan,
+      'fechasalida':this.fechasalida,
+      'horasalida':this.horasalida,
       'destino':this.destino,
        
     }; 
-    this.ApiService.guardarPersona(datos).subscribe({ 
+    this.ApiService.guardaSalida(datos).subscribe({ 
       next: (result) => { 
         console.log(result); 
         this.accionRealizada.emit(1);    
