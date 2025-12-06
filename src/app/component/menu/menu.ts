@@ -8,6 +8,8 @@ import { Component, Input } from '@angular/core';
 })
 export class Menu {
 
-  @Input() activo:number=0;
+  @Input() activo:number = 0;
 
+  // ← ESTA PROPIEDAD ES NECESARIA
+  menuOpen: boolean = false;
 }

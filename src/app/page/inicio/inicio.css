@@ -1,7 +1,95 @@
-p{ 
-background-image: url("/club_nautico.jpg"); 
-width: 100%; 
-height: 400px; 
-display: flex; 
-align-items: center; 
-justify-content: center; }
+.hero {
+  width: 100%;
+  height: 717px;
+
+  /* 🌈 Degradado moderno, profundo y elegante */
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+  /* Animación suave de entrada */
+  animation: fadeIn 1.2s ease;
+}
+
+/* Contenido centrado */
+.hero-content {
+  text-align: center;
+  color: #fff;
+  max-width: 700px;
+  padding: 20px;
+  animation: slideUp 1.2s ease;
+}
+
+/* Saludo principal */
+.saludo {
+  font-size: 3.2rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+
+  /* Degradado dorado más premium */
+  background: linear-gradient(90deg, #ffd200, #ffac33);
+  -webkit-background-clip: text;
+  color: transparent;
+
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* Subtexto */
+.subtext {
+  font-size: 1.35rem;
+  margin-bottom: 35px;
+  opacity: 0.92;
+  font-weight: 300;
+}
+
+/* Botón moderno */
+.inicio-btn {
+  font-size: 1.35rem;
+  padding: 16px 46px;
+  border-radius: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+
+  background: linear-gradient(90deg, #ffe259, #ffcc33);
+  color: #000;
+  border: none;
+
+  box-shadow: 0 6px 20px rgba(255, 204, 51, 0.4);
+  transition: 0.3s ease;
+
+  /* Efecto profesional */
+  transform: translateY(0);
+}
+
+/* Hover con efecto premium */
+.inicio-btn:hover {
+  transform: translateY(-5px) scale(1.03);
+  background: linear-gradient(90deg, #ffcc33, #ffe259);
+  box-shadow: 0 12px 30px rgba(255, 204, 51, 0.6);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(25px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero { height: 500px; padding: 0 10px; }
+  .saludo { font-size: 2.4rem; }
+  .subtext { font-size: 1.1rem; }
+  .inicio-btn { font-size: 1.05rem; padding: 12px 28px; }
+}

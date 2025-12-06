@@ -5,7 +5,7 @@
     <div class="form-group row">
         <label for="codigo" class="col-sm-1 col-form-label">Barco</label>
         <div class="col-sm-11">
-            <select [(ngModel)]="idbarco" class="form-control">
+            <select [(ngModel)]="idbarco" class="form-control mb-2">
                 @for(bas of bases; track bas){
                 <option value="{{bas.id}}">{{bas.nombre}}</option>
                 }
@@ -16,7 +16,7 @@
     <div class="form-group row">
         <label for="codigo" class="col-sm-1 col-form-label">Capitan</label>
         <div class="col-sm-11">
-            <select [(ngModel)]="idcapitan" class="form-control">
+            <select [(ngModel)]="idcapitan" class="form-control mb-2">
                 @for(bas of capitan; track bas){
                 <option value="{{bas.id}}">{{bas.nombre}}</option>
                 }
@@ -27,21 +27,21 @@
     <div class="form-group row">
         <label for="codigo" class="col-sm-1 col-form-label">Fecha</label>
         <div class="col-sm-11">
-            <input type="text" class="form-control-plaintext" [(ngModel)]="fechasalida" placeholder="Fecha Salida">
+            <input type="date"  class="form-control mb-2" [(ngModel)]="fechasalida" placeholder="Fecha Salida">
         </div>
     </div>
 
     <div class="form-group row">
         <label for="codigo" class="col-sm-1 col-form-label">Hora</label>
         <div class="col-sm-11">
-            <input type="text" class="form-control-plaintext" [(ngModel)]="horasalida" placeholder="Hora Salida">
+            <input type="time" class="form-control mb-2" [(ngModel)]="horasalida" placeholder="Hora Salida">
         </div>
     </div>
 
      <div class="form-group row">
         <label for="codigo" class="col-sm-1 col-form-label">Destino</label>
         <div class="col-sm-11">
-            <input type="text" class="form-control-plaintext" [(ngModel)]="destino" placeholder="Destino">
+            <input type="text" class="form-control mb-2" [(ngModel)]="destino" placeholder="Destino">
         </div>
     </div>
     <button class="btn btn-success" (click)="guardar()">Archivar</button>

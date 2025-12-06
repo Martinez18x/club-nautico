@@ -1,67 +1,31 @@
-<nav class="navbar navbar-expand-lg navbar-dark" 
-     style="background-color:#0a2738; padding:10px 20px;"> 
+<nav class="nav">
+  <div class="nav-container">
 
-  <a class="navbar-brand" href="#" 
-     style="font-size:1.5rem; font-weight:bold; color:white;">
-     Náutico Puerto Real
-  </a> 
+    <a class="brand" href="inicio">Náutico Puerto Real</a>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" 
-    data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
-    aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span> 
-  </button> 
+    <button class="toggle" (click)="menuOpen = !menuOpen">
+      <span></span><span></span><span></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarNavDropdown"> 
-    <div class="navbar-nav" style="gap:5px;">
+    <div class="links" [class.open]="menuOpen">
+      <a routerLink="persona" 
+        class="nav-item nav-link active" href="persona"
+        [class.active]="activo == 1">
+        Socios
+      </a>
 
-      @if(activo == 1){ 
-        <a class="nav-item nav-link active" href="persona"
-           style="color:white; background:#0f435f; border-radius:8px; padding:10px 15px;">
-           Socios
-        </a> 
-      }@else{ 
-        <a class="nav-item nav-link" href="persona"
-           style="color:#d7e8f0; padding:10px 15px;">
-           Socios
-        </a> 
-      }  
+      <a routerLink="barcos" 
+        class="nav-item nav-link active" href="barcos"
+        [class.active]="activo == 2">
+        Barcos
+      </a>
 
-      @if(activo == 2){ 
-        <a class="nav-item nav-link active" href="barcos"
-           style="color:white; background:#0f435f; border-radius:8px; padding:10px 15px;">
-           Barcos
-        </a> 
-      }@else{ 
-        <a class="nav-item nav-link" href="barcos"
-           style="color:#d7e8f0; padding:10px 15px;">
-           Barcos
-        </a> 
-      }  
+      <a routerLink="salida" 
+        class="nav-item nav-link active" href="salida"
+        [class.active]="activo == 3">
+        Salida
+      </a>
+    </div> <!-- ESTE CIERRE FALTABA -->
 
-      @if(activo == 3){ 
-        <a class="nav-item nav-link active" href="salida"
-           style="color:white; background:#0f435f; border-radius:8px; padding:10px 15px;">
-          Salida
-        </a> 
-      }@else{ 
-        <a class="nav-item nav-link" href="salida"
-           style="color:#d7e8f0; padding:10px 15px;">
-           Salida
-        </a> 
-      }       
-
-      @if(activo == 4){ 
-        <a class="nav-item nav-link active" href="salida"
-           style="color:white; background:#0f435f; border-radius:8px; padding:10px 15px;">
-          Capitan
-        </a> 
-      }@else{ 
-        <a class="nav-item nav-link" href="salida"
-           style="color:#d7e8f0; padding:10px 15px;">
-           Capitan
-        </a> 
-      }   
-    </div>     
-  </div> 
+  </div>
 </nav>
